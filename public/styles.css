@@ -1,3 +1,176 @@
-body{
-    background-color: red;
-}
+ *{
+    box-sizing: border-box;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  p, h1, h2, h3, a, ul{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #222;
+  }
+
+/********************nav bar************************************************************/
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+  }
+  .navbar a{
+      color: white;
+  }
+  .brand-title{
+    font-size: 1.5rem;
+    margin: .5rem;
+  }
+  .navbar-links ul{
+    margin: 0;
+    
+    display: flex;
+    align-items: center;
+  }
+  .navbar-links li{
+    list-style: none;
+  }
+  .navbar-links li a{
+    text-decoration: none;
+    color : white;
+    padding: 1rem;
+    display: bolck;
+  }
+  .navbar-links li:hover{
+    background-color: #555;
+  }
+  .toggle-btn{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px
+  }
+  .toggle-btn .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  @media(max-width: 600px){
+    .toggle-btn{
+      display: flex;
+    }
+    .navbar-links{
+      display: none;
+      width: 100%;
+    }
+    .navbar{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navbar-links ul{
+      width: 100%;
+      flex-direction: column;
+    }
+    .navbar-links li{
+      text-align: center;
+    }
+    .navbar-links li a{
+      padding: .5rem 1rem;
+    }
+    .navbar-links.active{
+      display: flex;
+    }
+  }
+  /* ********************************** Index stuly************************************************** */
+
+  .content{
+    margin-left: 20px;
+  }
+
+  
+  .blogs a{
+    display: block;
+    margin: 40px 0;
+    padding-left: 30px;
+    border-left: 6px solid rgb(7, 207, 67);
+  }
+  .blogs a:hover h3{
+    color: rgb(7, 207, 67);
+  }
+  /* *************** Create style ************************************ */
+
+  .create-blog form{
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .create-blog input,
+  .create-blog textarea{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+  }
+  .create-blog label{
+    display: block;
+    margin-top: 24px;
+  }
+  textarea{
+    height: 120px;
+  }
+  .create-blog button{
+    margin-top: 20px;
+    background: rgb(7, 207, 67);
+    color: white;
+    padding: 6px;
+    border: 0;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  /* ****************** details page ***********  */
+
+  .details{
+      max-width: 400px;
+      margin: auto;
+      
+      
+  }
+
+  .details h1{
+      font-size: 4rem;
+      margin-bottom: 1.6rem;
+  }
+  .details h2{
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .details p{
+      font-size: 1.6rem;
+  }
+  .delete{
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      cursor: pointer;
+      padding: 1rem;
+      background-color: #222;
+      color: white;
+      border-radius: 15px;
+  } 
+
+  /* ************** About page  *************/
+  .about h2{
+      font-size: 2rem;
+      margin: 2rem 1rem;
+  }
+  .about p{
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+  }
